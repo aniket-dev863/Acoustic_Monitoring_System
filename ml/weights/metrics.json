@@ -1,0 +1,6 @@
+{
+  "final_train_loss": 0.00514,
+  "calibrated_threshold": 0.07762824604287742,
+  "total_training_samples": 4,
+  "status": "TRAINED"
+}

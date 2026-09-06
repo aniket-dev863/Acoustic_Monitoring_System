@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  ml-service:
+    build:
+      context: .
+      dockerfile: ml/Dockerfile
+    container_name: acoustic-ml-service
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    volumes:
+      - ./data:/app/data
+      - ./ml/weights:/app/ml/weights
+      - ./backend/uploads:/app/backend/uploads
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: acoustic-backend
+    ports:
+      - "5001:5001"
+    environment:
+      - PORT=5001
+      - NODE_ENV=production
+      - ML_SERVICE_URL=http://ml-service:8000
+      - DATABASE_PATH=/app/backend/data/acoustic_monitor.sqlite
+    volumes:
+      - ./backend/uploads:/app/backend/uploads
+      - ./backend/data:/app/backend/data
+      - ./data:/app/data
+      - ./experiments:/app/experiments
+    depends_on:
+      - ml-service
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: acoustic-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:5001
+    depends_on:
+      - backend
+    restart: unless-stopped
