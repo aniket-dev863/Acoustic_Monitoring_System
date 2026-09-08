@@ -1,10 +1,21 @@
-# Python
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!*.example
+
+# ==========================================
+# Python & Virtual Environments
+# ==========================================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -17,45 +28,88 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-.venv
+MANIFEST
+
+# Virtual Environments
+.venv/
 venv/
 ENV/
+env/
 
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ==========================================
 # Node / Frontend / Backend
+# ==========================================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+package-lock.json.backup
+
+# Vite / Build outputs
 dist/
 dist-ssr/
 *.local
 
-# Database & uploads
+# ==========================================
+# Database & File Uploads
+# ==========================================
 *.sqlite
 *.sqlite3
 *.db
+backend/data/*.sqlite
+backend/data/*.sqlite3
+backend/data/*.db
+!backend/data/.gitkeep
+
+# Uploaded audio and runtime spectrograms
 backend/uploads/*
 !backend/uploads/.gitkeep
-backend/data/*.sqlite
+!backend/uploads/spectrograms/.gitkeep
 
-# Audio and generated datasets
+# ==========================================
+# Datasets & Heavy Audio Files
+# ==========================================
 data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
-data/sample/*
-!data/sample/.gitkeep
-experiments/results/*.json
-!experiments/results/.gitkeep
-experiments/plots/*.png
-!experiments/plots/.gitkeep
 
-# IDE / OS
+# ==========================================
+# Machine Learning Weights & Checkpoints
+# ==========================================
+ml/weights/*.pt
+ml/weights/*.pth
+ml/weights/*.keras
+ml/weights/*.h5
+ml/weights/*.onnx
+!ml/weights/.gitkeep
+!ml/weights/config.json
+!ml/weights/class_names.json
+
+# ==========================================
+# OS & Editor Artifacts
+# ==========================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 .idea/
 .vscode/
 *.swp
+*.swo
+*~

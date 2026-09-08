@@ -1,0 +1,530 @@
+[
+  {
+    "gate_type": "baseline_fixed_amplitude",
+    "gate_version": "Baseline-A-v1",
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1_score": 0.6667,
+    "false_positive_rate": 0.75,
+    "false_negative_rate": 0.0,
+    "trigger_rate_pct": 85.71,
+    "anomaly_recall_pct": 100.0,
+    "audio_rejected_pct": 4.62,
+    "ml_invocations_avoided_pct": 14.29,
+    "mean_latency_ms": 18.82,
+    "confusion_matrix": {
+      "tp": 3,
+      "fp": 3,
+      "tn": 1,
+      "fn": 0
+    },
+    "file_records": [
+      {
+        "file_name": "bearing_anomaly.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0819,
+        "events_count": 0
+      },
+      {
+        "file_name": "isolated_transient_clicks.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.2922,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0724,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.1006,
+        "events_count": 0
+      },
+      {
+        "file_name": "noise_shift_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.1364,
+        "max_score": 0.1604,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.3032,
+        "events_count": 0
+      },
+      {
+        "file_name": "silence.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0005,
+        "events_count": 0
+      }
+    ],
+    "stage": "Stage A",
+    "stage_name": "Energy Only",
+    "stage_description": "Baseline fixed amplitude energy threshold"
+  },
+  {
+    "gate_type": "adaptive_multiband_resource_gate",
+    "gate_version": "AMRAG-v1",
+    "precision": 0.5,
+    "recall": 0.3333,
+    "f1_score": 0.4,
+    "false_positive_rate": 0.25,
+    "false_negative_rate": 0.6667,
+    "trigger_rate_pct": 28.57,
+    "anomaly_recall_pct": 33.33,
+    "audio_rejected_pct": 66.15,
+    "ml_invocations_avoided_pct": 71.43,
+    "mean_latency_ms": 39.09,
+    "confusion_matrix": {
+      "tp": 1,
+      "fp": 1,
+      "tn": 3,
+      "fn": 2
+    },
+    "file_records": [
+      {
+        "file_name": "bearing_anomaly.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.1371,
+        "events_count": 0
+      },
+      {
+        "file_name": "isolated_transient_clicks.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.0032,
+        "max_score": 0.5657,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.028,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0214,
+        "events_count": 0
+      },
+      {
+        "file_name": "noise_shift_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.6096,
+        "max_score": 1.0,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.472,
+        "events_count": 0
+      },
+      {
+        "file_name": "silence.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0319,
+        "events_count": 0
+      }
+    ],
+    "stage": "Stage B",
+    "stage_name": "+ Adaptive SNR",
+    "stage_description": "Adaptive full-band background noise tracking"
+  },
+  {
+    "gate_type": "adaptive_multiband_resource_gate",
+    "gate_version": "AMRAG-v1",
+    "precision": 0.6667,
+    "recall": 0.6667,
+    "f1_score": 0.6667,
+    "false_positive_rate": 0.25,
+    "false_negative_rate": 0.3333,
+    "trigger_rate_pct": 42.86,
+    "anomaly_recall_pct": 66.67,
+    "audio_rejected_pct": 50.77,
+    "ml_invocations_avoided_pct": 57.14,
+    "mean_latency_ms": 36.45,
+    "confusion_matrix": {
+      "tp": 2,
+      "fp": 1,
+      "tn": 3,
+      "fn": 1
+    },
+    "file_records": [
+      {
+        "file_name": "bearing_anomaly.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4509,
+        "events_count": 0
+      },
+      {
+        "file_name": "isolated_transient_clicks.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.0096,
+        "max_score": 1.0,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.1469,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.1098,
+        "events_count": 0
+      },
+      {
+        "file_name": "noise_shift_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.5481,
+        "max_score": 1.0,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.746,
+        "max_score": 1.0,
+        "events_count": 0
+      },
+      {
+        "file_name": "silence.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0423,
+        "events_count": 0
+      }
+    ],
+    "stage": "Stage C",
+    "stage_name": "+ Multi-band",
+    "stage_description": "Independent sub-band spectral decomposition"
+  },
+  {
+    "gate_type": "adaptive_multiband_resource_gate",
+    "gate_version": "AMRAG-v1",
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1_score": 0.8571,
+    "false_positive_rate": 0.25,
+    "false_negative_rate": 0.0,
+    "trigger_rate_pct": 57.14,
+    "anomaly_recall_pct": 100.0,
+    "audio_rejected_pct": 35.38,
+    "ml_invocations_avoided_pct": 42.86,
+    "mean_latency_ms": 38.43,
+    "confusion_matrix": {
+      "tp": 3,
+      "fp": 1,
+      "tn": 3,
+      "fn": 0
+    },
+    "file_records": [
+      {
+        "file_name": "bearing_anomaly.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.1415,
+        "max_score": 0.6385,
+        "events_count": 0
+      },
+      {
+        "file_name": "isolated_transient_clicks.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.0096,
+        "max_score": 0.7446,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.419,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.1927,
+        "events_count": 0
+      },
+      {
+        "file_name": "noise_shift_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.5107,
+        "max_score": 0.9202,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.7299,
+        "max_score": 0.888,
+        "events_count": 0
+      },
+      {
+        "file_name": "silence.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.3816,
+        "events_count": 0
+      }
+    ],
+    "stage": "Stage D",
+    "stage_name": "+ Spectral Features",
+    "stage_description": "Band energy ratio, flux, and tonal entropy"
+  },
+  {
+    "gate_type": "adaptive_multiband_resource_gate",
+    "gate_version": "AMRAG-v1",
+    "precision": 0.6667,
+    "recall": 0.6667,
+    "f1_score": 0.6667,
+    "false_positive_rate": 0.25,
+    "false_negative_rate": 0.3333,
+    "trigger_rate_pct": 42.86,
+    "anomaly_recall_pct": 66.67,
+    "audio_rejected_pct": 50.77,
+    "ml_invocations_avoided_pct": 57.14,
+    "mean_latency_ms": 37.65,
+    "confusion_matrix": {
+      "tp": 2,
+      "fp": 1,
+      "tn": 3,
+      "fn": 1
+    },
+    "file_records": [
+      {
+        "file_name": "bearing_anomaly.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.6374,
+        "events_count": 0
+      },
+      {
+        "file_name": "isolated_transient_clicks.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.0129,
+        "max_score": 0.7446,
+        "events_count": 1
+      },
+      {
+        "file_name": "bearing_normal.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.419,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.1927,
+        "events_count": 0
+      },
+      {
+        "file_name": "noise_shift_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.6096,
+        "max_score": 0.9202,
+        "events_count": 1
+      },
+      {
+        "file_name": "fan_anomaly.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.9743,
+        "max_score": 0.8784,
+        "events_count": 1
+      },
+      {
+        "file_name": "silence.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.3816,
+        "events_count": 0
+      }
+    ],
+    "stage": "Stage E",
+    "stage_name": "+ Temporal Persistence",
+    "stage_description": "Hysteresis state machine and consecutive frame confirmation"
+  },
+  {
+    "gate_type": "adaptive_multiband_resource_gate",
+    "gate_version": "AMRAG-v1",
+    "precision": 1.0,
+    "recall": 0.6667,
+    "f1_score": 0.8,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.3333,
+    "trigger_rate_pct": 28.57,
+    "anomaly_recall_pct": 66.67,
+    "audio_rejected_pct": 66.15,
+    "ml_invocations_avoided_pct": 71.43,
+    "mean_latency_ms": 42.05,
+    "confusion_matrix": {
+      "tp": 2,
+      "fp": 0,
+      "tn": 4,
+      "fn": 1
+    },
+    "file_records": [
+      {
+        "file_name": "bearing_anomaly.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.6374,
+        "events_count": 0
+      },
+      {
+        "file_name": "isolated_transient_clicks.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.7446,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.419,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.1927,
+        "events_count": 0
+      },
+      {
+        "file_name": "noise_shift_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.1283,
+        "max_score": 0.9202,
+        "events_count": 1
+      },
+      {
+        "file_name": "fan_anomaly.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.4437,
+        "max_score": 0.8784,
+        "events_count": 1
+      },
+      {
+        "file_name": "silence.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.3816,
+        "events_count": 0
+      }
+    ],
+    "stage": "Stage F",
+    "stage_name": "+ Resource Awareness",
+    "stage_description": "Full AMRAG with dynamic battery/compute budget scaling"
+  }
+]
