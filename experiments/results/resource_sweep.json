@@ -1,0 +1,72 @@
+{
+  "1.0": {
+    "resource_level": 1.0,
+    "effective_threshold": 0.55,
+    "recall": 0.5,
+    "fpr": 0.0909,
+    "ml_invocations_avoided_pct": 68.75,
+    "triggers": 15,
+    "confusion": {
+      "tp": 13,
+      "fp": 2,
+      "tn": 20,
+      "fn": 13
+    }
+  },
+  "0.8": {
+    "resource_level": 0.8,
+    "effective_threshold": 0.61,
+    "recall": 0.4615,
+    "fpr": 0.0909,
+    "ml_invocations_avoided_pct": 70.83,
+    "triggers": 14,
+    "confusion": {
+      "tp": 12,
+      "fp": 2,
+      "tn": 20,
+      "fn": 14
+    }
+  },
+  "0.6": {
+    "resource_level": 0.6,
+    "effective_threshold": 0.67,
+    "recall": 0.4231,
+    "fpr": 0.0,
+    "ml_invocations_avoided_pct": 77.08,
+    "triggers": 11,
+    "confusion": {
+      "tp": 11,
+      "fp": 0,
+      "tn": 22,
+      "fn": 15
+    }
+  },
+  "0.4": {
+    "resource_level": 0.4,
+    "effective_threshold": 0.73,
+    "recall": 0.4231,
+    "fpr": 0.0,
+    "ml_invocations_avoided_pct": 77.08,
+    "triggers": 11,
+    "confusion": {
+      "tp": 11,
+      "fp": 0,
+      "tn": 22,
+      "fn": 15
+    }
+  },
+  "0.2": {
+    "resource_level": 0.2,
+    "effective_threshold": 0.79,
+    "recall": 0.3077,
+    "fpr": 0.0,
+    "ml_invocations_avoided_pct": 83.33,
+    "triggers": 8,
+    "confusion": {
+      "tp": 8,
+      "fp": 0,
+      "tn": 22,
+      "fn": 18
+    }
+  }
+}

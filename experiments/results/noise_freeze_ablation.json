@@ -1,0 +1,118 @@
+{
+  "experiment": "noise_freeze_ablation",
+  "description": "AMRAG (event-aware noise freeze ON) vs Baseline-C (no event freeze)",
+  "amrag": {
+    "recall": 0.2857,
+    "fpr": 0.0,
+    "confusion": {
+      "tp": 2,
+      "fp": 0,
+      "tn": 3,
+      "fn": 5
+    }
+  },
+  "baseline_c": {
+    "recall": 0.2857,
+    "fpr": 0.3333,
+    "confusion": {
+      "tp": 2,
+      "fp": 1,
+      "tn": 2,
+      "fn": 5
+    }
+  },
+  "recall_improvement": 0.0,
+  "fpr_improvement": 0.3333,
+  "file_records": [
+    {
+      "file": "edge_nonstationary_noise_with_anomaly.wav",
+      "true_label": "anomaly",
+      "amrag_triggered": true,
+      "baseline_c_triggered": true,
+      "amrag_score": 0.9066,
+      "baseline_c_score": 15.8867,
+      "freeze_effect": "same"
+    },
+    {
+      "file": "edge_nonstationary_rising_noise_normal.wav",
+      "true_label": "normal",
+      "amrag_triggered": false,
+      "baseline_c_triggered": true,
+      "amrag_score": 0.549,
+      "baseline_c_score": 16.4591,
+      "freeze_effect": "same"
+    },
+    {
+      "file": "bearing_anomaly_outer_race.wav",
+      "true_label": "anomaly",
+      "amrag_triggered": false,
+      "baseline_c_triggered": false,
+      "amrag_score": 0.603,
+      "baseline_c_score": 3.944,
+      "freeze_effect": "both missed"
+    },
+    {
+      "file": "bearing_anomaly_inner_race.wav",
+      "true_label": "anomaly",
+      "amrag_triggered": false,
+      "baseline_c_triggered": false,
+      "amrag_score": 0.5537,
+      "baseline_c_score": 3.085,
+      "freeze_effect": "both missed"
+    },
+    {
+      "file": "fan_anomaly_blade_unbalance.wav",
+      "true_label": "anomaly",
+      "amrag_triggered": true,
+      "baseline_c_triggered": true,
+      "amrag_score": 0.8619,
+      "baseline_c_score": 8.4824,
+      "freeze_effect": "same"
+    },
+    {
+      "file": "gearbox_anomaly_wear.wav",
+      "true_label": "anomaly",
+      "amrag_triggered": false,
+      "baseline_c_triggered": false,
+      "amrag_score": 0.4348,
+      "baseline_c_score": 2.0809,
+      "freeze_effect": "both missed"
+    },
+    {
+      "file": "pump_anomaly_shaft_imbalance.wav",
+      "true_label": "anomaly",
+      "amrag_triggered": false,
+      "baseline_c_triggered": false,
+      "amrag_score": 0.2601,
+      "baseline_c_score": 5.1929,
+      "freeze_effect": "both missed"
+    },
+    {
+      "file": "edge_low_snr_anomaly.wav",
+      "true_label": "anomaly",
+      "amrag_triggered": false,
+      "baseline_c_triggered": false,
+      "amrag_score": 0.266,
+      "baseline_c_score": 0.7766,
+      "freeze_effect": "both missed"
+    },
+    {
+      "file": "fan_normal_0.wav",
+      "true_label": "normal",
+      "amrag_triggered": false,
+      "baseline_c_triggered": false,
+      "amrag_score": 0.2102,
+      "baseline_c_score": 0.903,
+      "freeze_effect": "same"
+    },
+    {
+      "file": "gearbox_normal_0.wav",
+      "true_label": "normal",
+      "amrag_triggered": false,
+      "baseline_c_triggered": false,
+      "amrag_score": 0.4123,
+      "baseline_c_score": 0.2064,
+      "freeze_effect": "same"
+    }
+  ]
+}

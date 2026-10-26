@@ -2,23 +2,68 @@
   "Baseline-A-v1": {
     "gate_type": "baseline_fixed_amplitude",
     "gate_version": "Baseline-A-v1",
-    "precision": 0.5,
+    "precision": 0.5652,
     "recall": 1.0,
-    "f1_score": 0.6667,
-    "false_positive_rate": 0.75,
+    "f1_score": 0.7222,
+    "false_positive_rate": 0.9091,
     "false_negative_rate": 0.0,
-    "trigger_rate_pct": 85.71,
+    "trigger_rate_pct": 95.83,
     "anomaly_recall_pct": 100.0,
-    "audio_rejected_pct": 4.62,
-    "ml_invocations_avoided_pct": 14.29,
-    "mean_latency_ms": 18.76,
+    "audio_rejected_pct": 1.27,
+    "ml_invocations_avoided_pct": 4.17,
+    "mean_latency_ms": 19.89,
     "confusion_matrix": {
-      "tp": 3,
-      "fp": 3,
-      "tn": 1,
+      "tp": 26,
+      "fp": 20,
+      "tn": 2,
       "fn": 0
     },
     "file_records": [
+      {
+        "file_name": "pump_normal_1.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.1994,
+        "max_score": 0.051,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_low_snr_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0648,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_normal_0.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.0032,
+        "max_score": 0.0503,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_cavitation.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.3076,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_normal_2.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.9968,
+        "max_score": 0.054,
+        "events_count": 0
+      },
       {
         "file_name": "bearing_anomaly.wav",
         "machine_type": "bearing",
@@ -26,6 +71,15 @@
         "triggered": true,
         "trigger_rate": 1.0,
         "max_score": 0.0819,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_misalignment.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.2427,
         "events_count": 0
       },
       {
@@ -47,12 +101,165 @@
         "events_count": 0
       },
       {
+        "file_name": "edge_high_noise_strong_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.2845,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_bearing_squeal.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.1333,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_nonstationary_noise_with_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.1578,
+        "max_score": 0.1681,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_flutter.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.1171,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_combined_fault.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.1022,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_silence.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0002,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_blade_unbalance.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.3451,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_normal_2.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0592,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_stator_rub.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.2753,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_normal_1.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0568,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_normal_0.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0562,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_shaft_imbalance.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.3357,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_2.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0652,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_stuck_thud.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.4042,
+        "events_count": 0
+      },
+      {
         "file_name": "fan_normal.wav",
         "machine_type": "fan",
         "true_label": "normal",
         "triggered": true,
         "trigger_rate": 1.0,
         "max_score": 0.1006,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_1.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0649,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_0.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.064,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_transient_clicks_only.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.2671,
         "events_count": 0
       },
       {
@@ -74,6 +281,33 @@
         "events_count": 0
       },
       {
+        "file_name": "gearbox_anomaly_lubrication.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.2051,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_outer_race.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0682,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_1.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0572,
+        "events_count": 0
+      },
+      {
         "file_name": "silence.wav",
         "machine_type": "unknown",
         "true_label": "normal",
@@ -81,29 +315,209 @@
         "trigger_rate": 0.0,
         "max_score": 0.0005,
         "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_0.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0567,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_inner_race.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0713,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_wear.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.2318,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_2.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0598,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_seal_leak.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.1626,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_cavitation.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.3383,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_impeller_damage.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.7074,
+        "max_score": 0.0677,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_tooth_break.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.3654,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_0.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0585,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_friction_resonance.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.1338,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_cage_defect.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.2572,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_nonstationary_rising_noise_normal.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.0802,
+        "max_score": 0.082,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_1.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0603,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_2.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0636,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_spalling.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.3286,
+        "events_count": 0
       }
     ]
   },
   "Baseline-B-v1": {
     "gate_type": "baseline_fixed_band",
     "gate_version": "Baseline-B-v1",
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1_score": 0.0,
+    "precision": 1.0,
+    "recall": 0.2692,
+    "f1_score": 0.4242,
     "false_positive_rate": 0.0,
-    "false_negative_rate": 1.0,
-    "trigger_rate_pct": 0.0,
-    "anomaly_recall_pct": 0.0,
-    "audio_rejected_pct": 100.0,
-    "ml_invocations_avoided_pct": 100.0,
-    "mean_latency_ms": 17.07,
+    "false_negative_rate": 0.7308,
+    "trigger_rate_pct": 14.58,
+    "anomaly_recall_pct": 26.92,
+    "audio_rejected_pct": 85.17,
+    "ml_invocations_avoided_pct": 85.42,
+    "mean_latency_ms": 18.04,
     "confusion_matrix": {
-      "tp": 0,
+      "tp": 7,
       "fp": 0,
-      "tn": 4,
-      "fn": 3
+      "tn": 22,
+      "fn": 19
     },
     "file_records": [
+      {
+        "file_name": "pump_normal_1.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0003,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_low_snr_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_normal_0.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0002,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_cavitation.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.0096,
+        "max_score": 0.0215,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_normal_2.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0003,
+        "events_count": 0
+      },
       {
         "file_name": "bearing_anomaly.wav",
         "machine_type": "bearing",
@@ -111,6 +525,15 @@
         "triggered": false,
         "trigger_rate": 0.0,
         "max_score": 0.0036,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_misalignment.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0328,
         "events_count": 0
       },
       {
@@ -132,12 +555,165 @@
         "events_count": 0
       },
       {
+        "file_name": "edge_high_noise_strong_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0043,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_bearing_squeal.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_nonstationary_noise_with_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0189,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_flutter.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0011,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_combined_fault.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0002,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_silence.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_blade_unbalance.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0127,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_normal_2.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0023,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_stator_rub.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.0064,
+        "max_score": 0.0206,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_normal_1.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0022,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_normal_0.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0021,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_shaft_imbalance.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0002,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_2.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.001,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_stuck_thud.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0012,
+        "events_count": 0
+      },
+      {
         "file_name": "fan_normal.wav",
         "machine_type": "fan",
         "true_label": "normal",
         "triggered": false,
         "trigger_rate": 0.0,
         "max_score": 0.0,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_1.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.001,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_0.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0011,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_transient_clicks_only.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0009,
         "events_count": 0
       },
       {
@@ -159,6 +735,33 @@
         "events_count": 0
       },
       {
+        "file_name": "gearbox_anomaly_lubrication.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0088,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_outer_race.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0018,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_1.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0018,
+        "events_count": 0
+      },
+      {
         "file_name": "silence.wav",
         "machine_type": "unknown",
         "true_label": "normal",
@@ -166,29 +769,209 @@
         "trigger_rate": 0.0,
         "max_score": 0.0,
         "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_0.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0018,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_inner_race.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0018,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_wear.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 1.0,
+        "max_score": 0.0394,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_2.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0019,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_seal_leak.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.001,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_cavitation.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.2026,
+        "max_score": 0.0256,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_impeller_damage.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0003,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_tooth_break.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.4019,
+        "max_score": 0.05,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_0.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_friction_resonance.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_cage_defect.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.002,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_nonstationary_rising_noise_normal.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0002,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_1.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0001,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_2.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0002,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_spalling.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.1318,
+        "max_score": 0.0262,
+        "events_count": 0
       }
     ]
   },
   "Baseline-C-v1": {
     "gate_type": "baseline_adaptive_snr",
     "gate_version": "Baseline-C-v1",
-    "precision": 0.6667,
-    "recall": 0.6667,
-    "f1_score": 0.6667,
-    "false_positive_rate": 0.25,
-    "false_negative_rate": 0.3333,
-    "trigger_rate_pct": 42.86,
-    "anomaly_recall_pct": 66.67,
-    "audio_rejected_pct": 50.77,
-    "ml_invocations_avoided_pct": 57.14,
-    "mean_latency_ms": 23.51,
+    "precision": 0.8,
+    "recall": 0.4615,
+    "f1_score": 0.5854,
+    "false_positive_rate": 0.1364,
+    "false_negative_rate": 0.5385,
+    "trigger_rate_pct": 31.25,
+    "anomaly_recall_pct": 46.15,
+    "audio_rejected_pct": 66.95,
+    "ml_invocations_avoided_pct": 68.75,
+    "mean_latency_ms": 24.59,
     "confusion_matrix": {
-      "tp": 2,
-      "fp": 1,
-      "tn": 3,
-      "fn": 1
+      "tp": 12,
+      "fp": 3,
+      "tn": 19,
+      "fn": 14
     },
     "file_records": [
+      {
+        "file_name": "pump_normal_1.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.431,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_low_snr_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.7766,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_normal_0.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.5288,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_cavitation.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.1093,
+        "max_score": 11.1952,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_normal_2.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.6142,
+        "events_count": 0
+      },
       {
         "file_name": "bearing_anomaly.wav",
         "machine_type": "bearing",
@@ -196,6 +979,15 @@
         "triggered": false,
         "trigger_rate": 0.0,
         "max_score": 2.7466,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_misalignment.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.0184,
         "events_count": 0
       },
       {
@@ -217,12 +1009,165 @@
         "events_count": 0
       },
       {
+        "file_name": "edge_high_noise_strong_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.6045,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_bearing_squeal.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.3087,
+        "max_score": 7.7713,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_nonstationary_noise_with_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.2487,
+        "max_score": 15.8867,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_flutter.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 2.6478,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_combined_fault.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.8528,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_silence.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": -4.6834,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_blade_unbalance.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.0643,
+        "max_score": 8.4824,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_normal_2.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4246,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_stator_rub.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.1125,
+        "max_score": 14.2362,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_normal_1.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.2483,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_normal_0.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.2064,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_shaft_imbalance.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 5.1929,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_2.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 1.1368,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_stuck_thud.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.0322,
+        "max_score": 19.839,
+        "events_count": 0
+      },
+      {
         "file_name": "fan_normal.wav",
         "machine_type": "fan",
         "true_label": "normal",
         "triggered": false,
         "trigger_rate": 0.0,
         "max_score": 0.4444,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_1.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 1.0826,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_0.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.9604,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_transient_clicks_only.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.0096,
+        "max_score": 16.7186,
         "events_count": 0
       },
       {
@@ -244,6 +1189,33 @@
         "events_count": 0
       },
       {
+        "file_name": "gearbox_anomaly_lubrication.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.8903,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_outer_race.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 3.944,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_1.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.7858,
+        "events_count": 0
+      },
+      {
         "file_name": "silence.wav",
         "machine_type": "unknown",
         "true_label": "normal",
@@ -251,29 +1223,209 @@
         "trigger_rate": 0.0,
         "max_score": 0.6826,
         "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_0.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.7845,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_inner_race.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 3.085,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_wear.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 2.0809,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_2.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.8136,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_seal_leak.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4454,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_cavitation.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.0932,
+        "max_score": 8.9756,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_impeller_damage.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 3.4847,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_tooth_break.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.1254,
+        "max_score": 16.3715,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_0.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.903,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_friction_resonance.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.1752,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_cage_defect.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.0386,
+        "max_score": 18.0364,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_nonstationary_rising_noise_normal.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.2112,
+        "max_score": 16.4591,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_1.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.93,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_2.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.9114,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_spalling.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.1093,
+        "max_score": 10.5372,
+        "events_count": 0
       }
     ]
   },
   "AMRAG-v1": {
     "gate_type": "adaptive_multiband_resource_gate",
     "gate_version": "AMRAG-v1",
-    "precision": 0.6667,
-    "recall": 0.6667,
-    "f1_score": 0.6667,
-    "false_positive_rate": 0.25,
-    "false_negative_rate": 0.3333,
-    "trigger_rate_pct": 42.86,
-    "anomaly_recall_pct": 66.67,
-    "audio_rejected_pct": 50.77,
-    "ml_invocations_avoided_pct": 57.14,
-    "mean_latency_ms": 38.43,
+    "precision": 0.8667,
+    "recall": 0.5,
+    "f1_score": 0.6341,
+    "false_positive_rate": 0.0909,
+    "false_negative_rate": 0.5,
+    "trigger_rate_pct": 31.25,
+    "anomaly_recall_pct": 50.0,
+    "audio_rejected_pct": 67.37,
+    "ml_invocations_avoided_pct": 68.75,
+    "mean_latency_ms": 42.94,
     "confusion_matrix": {
-      "tp": 2,
-      "fp": 1,
-      "tn": 3,
-      "fn": 1
+      "tp": 13,
+      "fp": 2,
+      "tn": 20,
+      "fn": 13
     },
     "file_records": [
+      {
+        "file_name": "pump_normal_1.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.2097,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_low_snr_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.266,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_normal_0.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.1993,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_cavitation.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.5145,
+        "max_score": 0.8641,
+        "events_count": 1
+      },
+      {
+        "file_name": "pump_normal_2.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.2404,
+        "events_count": 0
+      },
       {
         "file_name": "bearing_anomaly.wav",
         "machine_type": "bearing",
@@ -281,6 +1433,15 @@
         "triggered": false,
         "trigger_rate": 0.0,
         "max_score": 0.6374,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_misalignment.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4076,
         "events_count": 0
       },
       {
@@ -302,6 +1463,132 @@
         "events_count": 0
       },
       {
+        "file_name": "edge_high_noise_strong_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4565,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_bearing_squeal.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.9743,
+        "max_score": 0.7746,
+        "events_count": 1
+      },
+      {
+        "file_name": "edge_nonstationary_noise_with_anomaly.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.1337,
+        "max_score": 0.9066,
+        "events_count": 1
+      },
+      {
+        "file_name": "valve_anomaly_flutter.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4747,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_combined_fault.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4406,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_silence.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.3649,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_blade_unbalance.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.3151,
+        "max_score": 0.8619,
+        "events_count": 1
+      },
+      {
+        "file_name": "gearbox_normal_2.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.3941,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_stator_rub.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.3119,
+        "max_score": 0.8672,
+        "events_count": 1
+      },
+      {
+        "file_name": "gearbox_normal_1.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4215,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_normal_0.wav",
+        "machine_type": "gearbox",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4123,
+        "events_count": 0
+      },
+      {
+        "file_name": "pump_anomaly_shaft_imbalance.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.2601,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_2.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4448,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_stuck_thud.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.3987,
+        "max_score": 0.714,
+        "events_count": 1
+      },
+      {
         "file_name": "fan_normal.wav",
         "machine_type": "fan",
         "true_label": "normal",
@@ -309,6 +1596,33 @@
         "trigger_rate": 0.0,
         "max_score": 0.1927,
         "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_1.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4297,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_normal_0.wav",
+        "machine_type": "valve",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4381,
+        "events_count": 0
+      },
+      {
+        "file_name": "edge_transient_clicks_only.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": true,
+        "trigger_rate": 0.0129,
+        "max_score": 0.7464,
+        "events_count": 1
       },
       {
         "file_name": "noise_shift_anomaly.wav",
@@ -329,6 +1643,33 @@
         "events_count": 1
       },
       {
+        "file_name": "gearbox_anomaly_lubrication.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.456,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_outer_race.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.603,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_1.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4302,
+        "events_count": 0
+      },
+      {
         "file_name": "silence.wav",
         "machine_type": "unknown",
         "true_label": "normal",
@@ -336,6 +1677,141 @@
         "trigger_rate": 0.0,
         "max_score": 0.3816,
         "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_0.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4365,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_inner_race.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.5537,
+        "events_count": 0
+      },
+      {
+        "file_name": "gearbox_anomaly_wear.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4348,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_normal_2.wav",
+        "machine_type": "bearing",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4562,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_seal_leak.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.4433,
+        "events_count": 0
+      },
+      {
+        "file_name": "valve_anomaly_cavitation.wav",
+        "machine_type": "valve",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.7974,
+        "max_score": 0.7861,
+        "events_count": 1
+      },
+      {
+        "file_name": "pump_anomaly_impeller_damage.wav",
+        "machine_type": "unknown",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.7106,
+        "max_score": 0.8826,
+        "events_count": 1
+      },
+      {
+        "file_name": "gearbox_anomaly_tooth_break.wav",
+        "machine_type": "gearbox",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.4148,
+        "max_score": 0.8817,
+        "events_count": 1
+      },
+      {
+        "file_name": "fan_normal_0.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.2102,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_anomaly_friction_resonance.wav",
+        "machine_type": "fan",
+        "true_label": "anomaly",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.3667,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_cage_defect.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.9003,
+        "max_score": 0.7736,
+        "events_count": 1
+      },
+      {
+        "file_name": "edge_nonstationary_rising_noise_normal.wav",
+        "machine_type": "unknown",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.549,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_1.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.2279,
+        "events_count": 0
+      },
+      {
+        "file_name": "fan_normal_2.wav",
+        "machine_type": "fan",
+        "true_label": "normal",
+        "triggered": false,
+        "trigger_rate": 0.0,
+        "max_score": 0.2541,
+        "events_count": 0
+      },
+      {
+        "file_name": "bearing_anomaly_spalling.wav",
+        "machine_type": "bearing",
+        "true_label": "anomaly",
+        "triggered": true,
+        "trigger_rate": 0.5981,
+        "max_score": 0.8681,
+        "events_count": 1
       }
     ]
   }
